@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+body {
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+	border: 2px solid #eee;
+	border-radius: 25px;
+	background: white;
+	margin-bottom: 0;
+}
+
+.navbar .logo {
+	font-size: 20px;
+	font-weight: bold;
+	color: #00bfc4;
+}
+
+.nav-links {
+	font-size: 20px;
+	display: flex;
+	gap: 50px;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #000;
+	font-weight: 500;
+}
+
+h1 {
+	color: white;
+	font-size: 50px;
+}
+
+.section {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 20px;
+	background: linear-gradient(to right, #6c81a0, #b8d1ff);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+}
+
+.container {
+	background-color: white;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.row {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.col {
+	flex: 1;
+	margin-right: 20px;
+}
+
+.col:last-child {
+	margin-right: 0;
+}
+
+#hello {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#hello input {
+	margin-bottom: 5px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-family: Arial, sans-serif;
+	font-size: small;
+	color: gray;
+}
+
+input,
+select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+#birthday,
+#image {
+	color: gray;
+}
+
+select {
+	appearance: none;
+}
+
+.buttons-row {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.submit-button,
+.login-button {
+	background-color: #2980b9;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	width: 120px;
+
+}
+
+.submit-button {
+
+	height: 50px;
+}
+
+.submit-button:hover,
+.login-button:hover {
+	background-color: white;
+	border: 1px solid #2980b9;
+	transform: scale(1.1);
+	transition: all 0.3s ease;
+	color: #2980b9;
+}

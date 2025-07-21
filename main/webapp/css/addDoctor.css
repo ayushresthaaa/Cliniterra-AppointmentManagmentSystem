@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+/* === Reset & Base === */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: linear-gradient(to right, #b2dbef, #DDE9F5);
+	font-family: Arial, sans-serif;
+	background: #f7f9fb;
+	color: #333;
+	padding-top: 80px;
+}
+
+/* Sidebar */
+.sidebar1 {
+	position: fixed;
+	top: 90px;
+	left: 0;
+	width: 200px;
+	height: 100%;
+	background-color: #2980b9;
+	padding-top: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	padding-left: 20px;
+	margin-top: -90px;
+}
+
+.sidebar1 a {
+	text-decoration: none;
+	color: white;
+	font-size: 22px;
+	font-weight: 500;
+	transition: 0.3s;
+	line-height: 2;
+
+}
+
+.sidebar1 a:hover {
+	text-decoration: underline;
+	transform: scale(1.05);
+}
+
+
+/* === Main Grid === */
+.add-doctor-page {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 30px;
+	max-width: 900px;
+	margin: 40px auto;
+}
+
+/* === Sidebar (Avatar Only) === */
+/* ↓ move entire avatar block down a bit */
+/* make the container a perfect circle, bigger, centered, with a strong white border & shadow */
+.sidebar .avatar-wrapper {
+	width: 160px;
+	height: 160px;
+	margin: 30px auto;
+	/* push it down & center horizontally */
+	position: relative;
+	border: 6px solid #fff;
+	/* thick white ring */
+	border-radius: 50%;
+	background: #f7f9fb;
+	/* fallback bg */
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+/* ensure the image fills the circle */
+.sidebar .avatar-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* style the “+” as a small circle in the corner */
+.sidebar {
+	text-align: center;
+}
+
+.avatar-wrapper {
+	width: 160px;
+	height: 160px;
+	margin: 50px auto 10px;
+	position: relative;
+	border-radius: 50%;
+	background: #f0f4f8;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.avatar-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	display: none;
+}
+
+.placeholder-text {
+	font-size: 14px;
+	color: #888;
+	pointer-events: none;
+	position: absolute;
+	text-align: center;
+}
+
+/* "+" Add Button */
+.add-icon {
+	position: absolute;
+	bottom: 12px;
+	/* Shifted upward */
+	right: 12px;
+	/* Shifted slightly left */
+	background-color: #2980b9;
+	color: white;
+	font-size: 20px;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 2;
+	transition: background-color 0.3s ease;
+}
+
+
+.add-icon:hover {
+	background-color: #2980b9;
+}
+
+/* Hide placeholder and "+" when image is uploaded */
+.avatar-wrapper:has(img[src]:not([src=""])) .add-icon {
+	display: none;
+}
+
+.avatar-wrapper img[src]:not([src=""]) {
+	display: block;
+}
+
+.avatar-wrapper img[src]:not([src=""])~.placeholder-text,
+.avatar-wrapper img[src]:not([src=""])~.add-icon {
+	display: none;
+}
+
+.avatar-wrapper:has(img[src]:not([src=""])) .placeholder-text {
+	display: none;
+}
+
+.avatar-wrapper img[src]:not([src=""]) {
+	display: block;
+}
+
+
+
+/* Upload Button */
+.upload-text-btn {
+	display: inline-block;
+	margin-top: 10px;
+	background-color: #2980b9;
+	color: white;
+	font-size: 14px;
+	padding: 8px 18px;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-decoration: none;
+}
+
+.upload-text-btn:hover {
+	background-color: #2980b9;
+	box-shadow: 0 8px 20px #2980b9;
+	color: white;
+	transform: scale(1.1);
+}
+
+
+
+/* === Form Section === */
+.form-section {
+	background: #fff;
+	border-radius: 16px;
+	padding: 30px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-section h2 {
+	color: #2980b9;
+	margin-bottom: 24px;
+	text-align: left;
+}
+
+.doctor-form .form-row {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin-bottom: 18px;
+}
+
+.form-group {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group label {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+	padding: 10px 14px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 14px;
+}
+
+.form-group textarea {
+	resize: vertical;
+}
+
+/* inline radios */
+.radio-group {
+	display: flex;
+
+	gap: 12px;
+	align-items: center;
+	font-size: 14px;
+}
+
+.radio-group input {
+	margin-right: 4px;
+}
+
+.radio-option input {
+	margin-right: 6px;
+}
+
+/* social row */
+.social-row .form-group input {
+	font-size: 13px;
+}
+
+/* === Buttons === */
+.form-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 14px;
+	margin-top: 20px;
+}
+
+.btn-cancel,
+.btn-save {
+	padding: 10px 22px;
+	border-radius: 25px;
+	font-size: 14px;
+	cursor: pointer;
+	background: #2980b9;
+	border: none;
+	color: #fff;
+}
+
+.btn-cancel {
+	background: #fff;
+	color: #555;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	border: 1px solid #ccc;
+}
+
+.btn-cancel:hover {
+	background: #f0f0f0;
+
+	color: black;
+	box-shadow: 0 8px 20px #2980b9;
+}
+
+.btn-save:hover {
+	background: #2980b9;
+	color: #fff;
+	box-shadow: 0 8px 20px #2980b9;
+
+}

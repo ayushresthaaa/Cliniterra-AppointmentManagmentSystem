@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+
+body {
+	font-family: 'Segoe UI', sans-serif;
+	background-image: url('images/bgadddoc.jpeg');
+	background-size: cover;
+	/* Make it cover the screen */
+	background-position: center;
+	/* Center the image */
+	background-repeat: no-repeat;
+	padding: 40px;
+	/*background: linear-gradient(to right, #b2dbef, #DDE9F5);*/
+}
+
+/* Sidebar */
+.sidebar {
+	position: fixed;
+	top: 90px;
+	left: 0;
+	width: 200px;
+	height: 100%;
+	background-color: #2980b9;
+	padding-top: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	padding-left: 20px;
+	margin-top: -90px;
+}
+
+.sidebar a {
+	text-decoration: none;
+	color: white;
+	font-size: 22px;
+	font-weight: 500;
+	transition: 0.3s;
+	line-height: 2;
+
+}
+
+.sidebar a:hover {
+	text-decoration: underline;
+	transform: scale(1.05);
+}
+
+
+/*Main*/
+.container {
+	background: linear-gradient(to right, #b2dbef, #eef5fd);
+	/* background: #f6f9fd;*/
+	padding: 30px;
+	border-radius: 12px;
+	max-width: 700px;
+	margin-top: 30px;
+	margin-left: 300px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+	color: #2980b9;
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 40px;
+
+}
+
+h3 {
+	font-size: 30px;
+	color: #2980b9;
+}
+
+label {
+	display: block;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+
+
+input[type="text"],
+input[type="email"],
+select {
+	width: 50%;
+	padding: 17px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 18px;
+}
+
+.schedule-row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+
+
+}
+
+.schedule-row label {
+	flex: 1;
+
+
+}
+
+.schedule-row select {
+	flex: 2;
+}
+
+
+
+button {
+	background-color: #2980b9;
+	color: #fff;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 16px;
+	width: 50%;
+	margin-left: 160px;
+	transition: all 0.6s ease;
+}
+
+button:hover {
+	background-color: #0077cc;
+	box-shadow: 0 8px 20px #2980b9;
+	color: white;
+	transform: scale(1.0);
+}

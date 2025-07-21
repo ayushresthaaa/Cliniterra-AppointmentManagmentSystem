@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', sans-serif;
+
+}
+
+body {
+	background-image: url('images/background.png');
+	background-size: cover;
+	/* Make it cover the screen */
+	background-position: center;
+	/* Center the image */
+	background-repeat: no-repeat;
+	background-color: rgb(183, 226, 251);
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 25px;
+	border: 2px solid #eee;
+	border-radius: 30px;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo {
+	width: 70px;
+	height: auto;
+	margin-top: 0;
+	margin-left: 0;
+	cursor: pointer;
+}
+
+.nav-links {
+	font-size: 20px;
+	display: flex;
+	gap: 50px;
+
+
+}
+
+.nav-links :hover {
+	transition: all 0.3s ease;
+	transform: scale(1.1);
+	color: #2980b9;
+}
+
+.button {
+	display: flex;
+	font-size: 20px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #2980b9;
+	border-radius: 10px;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.6s ease;
+}
+
+.button:hover {
+	background-color: #2980b9;
+	box-shadow: 0 8px 20px #2980b9;
+	color: white;
+	transform: scale(1.1);
+
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #000;
+}
+
+/*main*/
+
+.container {
+	display: flex;
+	background: white;
+	width: 90%;
+	max-width: 1000px;
+	border-radius: 16px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	margin-top: 200px;
+	margin-left: 230px;
+
+}
+
+.left-panel {
+	flex: 1;
+	background: #2980b9;
+	color: white;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	line-height: 1.5;
+}
+
+.left-panel h2 {
+	font-size: 30px;
+	margin-top: -150px;
+}
+
+.left-panel h1 {
+	font-size: 40px;
+	margin-top: 0px;
+}
+
+.left-panel img {
+	width: 100%;
+	margin-top: 40px;
+}
+
+.right-panel {
+	flex: 1.5;
+	padding: 40px;
+	background-color: #ffffff;
+}
+
+.right-panel h2 {
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+
+.right-panel p {
+	margin-bottom: 20px;
+	color: #666;
+}
+
+
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+form span {
+	color: red;
+}
+
+form label {
+	margin-top: 10px;
+	font-weight: 500;
+	color: #333;
+}
+
+form input,
+form textarea {
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	font-size: 14px;
+}
+
+form textarea {
+	resize: none;
+	height: 100px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group select {
+	border: 1px solid #ccc;
+	background-color: white;
+	border-radius: 10px;
+	font-size: 15px;
+	height: 50px;
+	margin-top: 15px;
+}
+
+
+.form-group span {
+	color: red;
+}
+
+
+
+form button {
+	padding: 14px;
+	background-color: #2980b9;
+	color: white;
+	border: none;
+	border-radius: 12px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.6s ease;
+}
+
+form button:hover {
+	background-color: #007bff;
+	box-shadow: 0 8px 20px #2980b9;
+}
+
+/*timeslots*/
+
+#timeSlots {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.time-slot {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.time-slot input {
+	margin: 0;
+}
+
+.time-slot.disabled {
+	color: #aaa;
+	pointer-events: none;
+	opacity: 0.6;
+}
+
+/* Footer Section */
+
+.footer {
+	background: #2980b9;
+	color: white;
+	padding: 20px 40px;
+	margin-top: 200px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-section {
+	flex: 1;
+	min-width: 250px;
+	line-height: 2;
+}
+
+.footer-section p {
+	line-height: 2;
+}
+
+.footer-section h3 {
+	font-size: 28px;
+	margin-bottom: 0px;
+	margin-left: 50px;
+	font-weight: bold;
+}
+
+.departments {
+	display: flex;
+	margin-left: 50px;
+
+}
+
+.departments ul {
+	font-size: 20px;
+	list-style: none;
+	line-height: 1.7;
+
+}
+
+.foo-column {
+	display: flex;
+	margin-left: 50px;
+}
+
+.foo-column ul li a {
+	list-style: none;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 1.7;
+	color: #ffffff;
+}
+
+.footer-bottom {
+	text-align: center;
+	margin-top: 30px;
+	padding-top: 20px;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	font-size: 14px;
+	color: white;
+}

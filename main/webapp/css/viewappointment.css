@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+
+	background: linear-gradient(to right, #b2dbef, #eef5fd);
+}
+
+/* Navbar */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 25px;
+	border: 2px solid #eee;
+	border-radius: 30px;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo {
+	width: 70px;
+	height: auto;
+	margin-top: 0;
+	margin-left: 0;
+	cursor: pointer;
+}
+
+.nav-links {
+	font-size: 20px;
+	display: flex;
+	gap: 50px;
+
+
+}
+
+.nav-links :hover {
+	transition: all 0.3s ease;
+	transform: scale(1.1);
+	color: #2980b9;
+}
+
+.button {
+	display: flex;
+	font-size: 20px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #2980b9;
+	border-radius: 10px;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.6s ease;
+}
+
+.button:hover {
+	background-color: #2980b9;
+	box-shadow: 0 8px 20px #2980b9;
+	color: white;
+	transform: scale(1.1);
+
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #000;
+}
+
+/*Main*/
+
+.container {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	margin-top: 150px;
+
+}
+
+h2 {
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.tabs {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+
+}
+
+.tab {
+	flex: 1;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+	color: #2980b9;
+	font-weight: bold;
+	border-bottom: 3px solid #2980b9;
+}
+
+.appointment-card {
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	padding: 20px;
+	margin-bottom: 15px;
+	position: relative;
+	line-height: 30px;
+}
+
+.date {
+	color: #2980b9;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.day {
+	font-size: 12px;
+	color: gray;
+}
+
+.appointment-details {
+	margin-left: 70px;
+}
+
+.appointment-header {
+	display: flex;
+	align-items: center;
+}
+
+.options-button {
+	background: #eee;
+	border: none;
+	padding: 6px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 14px;
+	margin-left: auto;
+}
+
+.options-menu {
+	position: absolute;
+	right: 20px;
+	top: 60px;
+	background: white;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	padding: 10px;
+	display: none;
+	flex-direction: column;
+	z-index: 2;
+}
+
+.options-menu.show {
+	display: flex;
+}
+
+.options-menu button {
+	background: none;
+	border: none;
+	padding: 8px 10px;
+	text-align: left;
+	width: 100%;
+	cursor: pointer;
+}
+
+.book-btn {
+	width: 100%;
+	background: #2980b9;
+	color: white;
+	padding: 15px;
+	border: none;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-top: 30px;
+	transition: all 0.6s ease;
+}
+
+.book-btn:hover {
+	background-color: #007bff;
+	box-shadow: 0 8px 20px #2980b9;
+}
+
+/* Footer Section */
+
+.footer {
+	background: #2980b9;
+	color: white;
+	padding: 20px 30px;
+	margin-top: 100px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.footer-section {
+	flex: 1;
+	min-width: 250px;
+}
+
+.footer-section p {
+	line-height: 1.9;
+}
+
+.footer-section h3 {
+	font-size: 28px;
+	margin-bottom: 5px;
+	margin-left: 50px;
+	font-weight: bold;
+}
+
+.departments {
+	display: flex;
+	margin-left: 50px;
+
+}
+
+.departments ul {
+	font-size: 20px;
+	list-style: none;
+	line-height: 1.7;
+
+}
+
+.foo-column {
+	display: flex;
+	margin-left: 50px;
+}
+
+.foo-column ul li a {
+	list-style: none;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 1.7;
+	color: #ffffff;
+}
+
+.footer-bottom {
+	text-align: center;
+	margin-top: 30px;
+	padding-top: 20px;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	font-size: 14px;
+	color: white;
+}
